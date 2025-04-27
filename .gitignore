@@ -1,0 +1,8 @@
+main.tf
+provider.tf
+todo
+.terraform
+terraform.tfstate
+.terraform.lock.hcl
+terraform.tfstate.backup
+*.tf
