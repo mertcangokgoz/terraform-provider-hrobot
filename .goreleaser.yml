@@ -5,8 +5,6 @@ version: 2
 before:
   hooks:
     - go mod tidy
-    - go install github.com/hashicorp/terraform-plugin-docs/cmd/tfplugindocs
-    - tfplugindocs generate
 builds:
   - env:
       # goreleaser does not work with CGO, it could also complicate
@@ -32,9 +30,6 @@ builds:
       - goos: darwin
         goarch: '386'
     binary: '{{ .ProjectName }}_v{{ .Version }}'
-archives:
-  - format: zip
-    name_template: '{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}'
 checksum:
   extra_files:
     - glob: 'terraform-registry-manifest.json'
