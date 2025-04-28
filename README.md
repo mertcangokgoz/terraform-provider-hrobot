@@ -26,3 +26,7 @@ provider "hrobot" {
   token = var.hrobot_token
 }
 ```
+
+## WARNING
+
+It is being worked on, there may be problematic functions.
